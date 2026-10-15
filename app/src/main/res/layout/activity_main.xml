@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1E1E1E">
+
+    <!-- Area Trackpad Mouse -->
+    <RelativeLayout
+        android:id="@+id/trackpadArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#2D2D2D"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="AREA MOUSE\n(Tap=Kiri, Tahan=Kanan, Kanan=Scroll)"
+            android:textAlignment="center"
+            android:textColor="#888888" />
+
+        <!-- Zona Scroll di sebelah kanan trackpad -->
+        <View
+            android:id="@+id/scrollZone"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="#1AFFFFFF" />
+    </RelativeLayout>
+
+    <!-- Barisan Tombol Tambahan -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/btnCtrl" android:text="Ctrl" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <Button android:id="@+id/btnAlt" android:text="Alt" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <Button android:id="@+id/btnHome" android:text="Home" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <Button android:id="@+id/btnEnd" android:text="End" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <Button android:id="@+id/btnLeft" android:text="←" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <Button android:id="@+id/btnUp" android:text="↑" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <Button android:id="@+id/btnDown" android:text="↓" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <Button android:id="@+id/btnRight" android:text="→" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Tombol untuk memunculkan Gboard -->
+    <Button
+        android:id="@+id/btnShowKeyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TAMPILKAN KEYBOARD (GBOARD)"
+        android:layout_margin="8dp" />
+
+    <!-- Input tersembunyi untuk menangkap ketikan dari Gboard -->
+    <EditText
+        android:id="@+id/hiddenInput"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:background="@null"
+        android:textColor="@android:color/transparent"
+        android:inputType="textVisiblePassword|textNoSuggestions"
+        android:importantForAutofill="no" />
+
+</LinearLayout>

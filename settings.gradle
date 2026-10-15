@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// [WAJIB] Nama proyek Anda
+rootProject.name = "Intiku HID"
+
+// [WAJIB] Memberitahu sistem untuk mem-build folder "app"
+include ':app'
